@@ -1,0 +1,33 @@
+<h1>Listing eat24signins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Emailid</th>
+      <th>Emailidconformation</th>
+      <th>Password</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eat24signins.each do |eat24signin| %>
+      <tr>
+        <td><%= eat24signin.firstname %></td>
+        <td><%= eat24signin.lastname %></td>
+        <td><%= eat24signin.emailid %></td>
+        <td><%= eat24signin.emailidconformation %></td>
+        <td><%= eat24signin.password %></td>
+        <td><%= link_to 'Show', eat24signin %></td>
+        <td><%= link_to 'Edit', edit_eat24signin_path(eat24signin) %></td>
+        <td><%= link_to 'Destroy', eat24signin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Eat24signin', new_eat24signin_path %>

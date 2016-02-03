@@ -1,0 +1,37 @@
+<%= form_for(@eat24signin) do |f| %>
+  <% if @eat24signin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@eat24signin.errors.count, "error") %> prohibited this eat24signin from being saved:</h2>
+
+      <ul>
+      <% @eat24signin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :firstname %><br>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname %><br>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :emailid %><br>
+    <%= f.text_field :emailid %>
+  </div>
+  <div class="field">
+    <%= f.label :emailidconformation %><br>
+    <%= f.text_field :emailidconformation %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
